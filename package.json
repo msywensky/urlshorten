@@ -1,0 +1,21 @@
+{
+  "name": "urlshorten",
+  "version": "0.1.0",
+  "description": "url shorten example",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4.13.3",
+    "mongoose": "^4.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msywensky/urlshorten"
+  },
+  "license": "MIT"
+}
