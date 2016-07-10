@@ -8,7 +8,7 @@ var model = mongoose.model('urls', schema);
 
 module.exports = {
 	saveUrl: function(url, callback) {
-		console.log("saveUrl is called " + url);
+//		console.log("saveUrl is called " + url);
 		model.findOne()
 		.sort('-idNum')
 		.exec(function(err, member) {
@@ -18,13 +18,13 @@ module.exports = {
 				console.log("Error trying to find record: " + err);
 			}
 			if (member != null) {
-				console.log("member is not null: " + member);
+				//console.log("member is not null: " + member);
 				maxId = member.idNum + 1;
 			}
 
 			var newUrl = new model({idNum:maxId, url:url});
 			return newUrl.save().then(function(result) {
-				console.log("in then for save");
+				//console.log("in then for save");
 				callback(result);
 				});
 		});
