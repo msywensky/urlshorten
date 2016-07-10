@@ -1,0 +1,27 @@
+<html>
+
+<head>
+	<title>url shorten</title>
+</head>
+
+<body>
+	<h3 style="text-align:center">URL Shortener</h3>
+	<p>
+		Usage: <span id="testUrl"></span><br />
+		Returns: { &quot;original_url &quot;: &quot;http://www.google.com &quot;, 
+		 &quot;short_url &quot;: &quot;<span id="shortUrl"></span> &quot; }
+	</p>
+</body>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) { 
+	console.log("running: " + window.location);
+		var testUrl = document.getElementById("testUrl");
+		var shortUrl = document.getElementById("shortUrl");
+		console.log(testUrl);
+		testUrl.innerHTML = window.location + "new/http://www.google.com";
+		shortUrl.innerHTML = window.location + "1234";
+	});
+
+</script>
+</html
