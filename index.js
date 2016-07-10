@@ -31,10 +31,8 @@ app.get("/new/*", function(req,res) {
   }
 
  urlSchema.saveUrl(u, function(o) {
-   console.log("in saveUrl callback");
-   var newurl = URL.parse(req.url).protocol + "//" + URL.parse(req.url).host;
-   var result = {original_url:o.url, short_url:newurl + "/" + o.idNum, parse:URL.parse(req.url)};
-    console.log("sending: " + result);
+   var newurl = "https://quiet-tor-75099.herokuapp.com/";
+   var result = {original_url:o.url, short_url:newurl + o.idNum};
     res.send(result);
   })
 });
