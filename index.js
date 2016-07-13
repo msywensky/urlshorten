@@ -42,6 +42,7 @@ app.get('/:id', function(req, res) {
 
   if (!isNumeric(id)) {
     res.send({err:"Invalid id"});
+    return;
   }
 
   urlSchema.getUrl(id, function(result) {
